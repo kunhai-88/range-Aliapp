@@ -4,10 +4,10 @@
   <view class='range-container' onTap="onTap">
     <view class='range-rail'  ></view>
     <view class='range-track' style={{utils.trackStyle(start,end)}}  ></view>
-    <view class='range-slider' data-type="start" style="left: {{start}}%"  touchMove={{onTouchMove}} touchEnd={{onTouchEnd}} 
+    <view class='range-slider' data-type="start" style="left: {{start}}%"  catchTouchMove="onTouchMove" catchTouchEnd="onTouchEnd"
         >
     </view>
-    <view class='range-slider' data-type="end" style="left:{{end}}%"  touchMove={{onTouchMove}} touchEnd={{onTouchEnd}} 
+    <view class='range-slider' data-type="end" style="left:{{end}}%"  catchTouchMove="onTouchMove" catchTouchEnd="onTouchEnd"
         >
     </view>
   </view>

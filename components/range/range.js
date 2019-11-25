@@ -22,12 +22,13 @@ Component({
   didMount() {
     this.currentSlider = 'start';
     this.left = 0;
-  
+
     this.deltaValue = 100;
     my.createSelectorQuery()
       .select('.range-container').boundingClientRect().exec((ret) => {
-        let { width } = ret[0];
+        let { width, left } = ret[0];
         this.width = width;
+        this.left = left;
       })
 
   },
@@ -35,16 +36,17 @@ Component({
   didUnmount() { },
   methods: {
     onTap(event) {
-      console.log(event);
       const targetValue = event.detail.clientX - this.left;
-      console.log(targetValue);
       this.setSliderValue(this.currentSlider, targetValue)
     },
     onTouchMove(event) {
-      console.log(event);
+
+      const clientX = event.touches[0].clientX
+      this.setSliderValue(event.target.dataset.type, clientX - this.left)
     },
     onTouchEnd(event) {
-      console.log(event);
+      this.currentSlider = event.target.dataset.type;
+
     },
     setSliderValue(sliderName = 'start', targetValue) {
 
