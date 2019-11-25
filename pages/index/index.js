@@ -32,11 +32,11 @@ Page({
   onReachBottom() {
     // 页面被拉到底部
   },
- 
-  onTouchMove (event) {
+
+  onTouchMove(event) {
     console.log(event);
   },
-  onTouchEnd (event) {
-      console.log(event);
+  onTouchEnd(event) {
+    console.log(event);
   }
 });
