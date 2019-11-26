@@ -1,5 +1,5 @@
  
 <view class="top"></view>
 <range min="0" max="600" value="{{value}}" onChange="onChange"  />
- <view>{{value[0]}}</view>
- <view>{{value[1]}}</view>
+ <view class="number"> min: {{value[0]}}</view>
+ <view class="number"> max: {{value[1]}}</view>

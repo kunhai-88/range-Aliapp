@@ -1,6 +1,6 @@
 Page({
   data: {
-    value: [20, 50]
+    value: [20, 400]
   },
   onLoad() {
 
