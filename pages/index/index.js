@@ -27,7 +27,6 @@ Page({
     // 页面被拉到底部
   },
   onChange(value){
-    console.log(value);
     this.setData({
       value,
     })
