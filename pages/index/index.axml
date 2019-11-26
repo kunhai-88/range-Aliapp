@@ -1,4 +1,5 @@
  
 <view class="top"></view>
-<range />
- 
+<range min="0" max="60" value="{{value}}" onChange="onChange"  />
+ <view>{{value[0]}}</view>
+ <view>{{value[1]}}</view>

@@ -1,7 +1,9 @@
 Page({
- 
-  onLoad(query) {
-     
+  data: {
+    value: [20, 50]
+  },
+  onLoad() {
+
   },
   onReady() {
     // 页面加载完成
@@ -24,5 +26,11 @@ Page({
   onReachBottom() {
     // 页面被拉到底部
   },
-   
+  onChange(value){
+    console.log(value);
+    this.setData({
+      value,
+    })
+  }
+
 });
